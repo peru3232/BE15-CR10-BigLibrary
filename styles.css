@@ -1,0 +1,25 @@
+.hero{
+  height: 25vH;
+  background-size: cover;
+}
+
+.img-thumbnail{
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.ownFieldset {
+  margin: 100px auto auto;
+  width: 60% ;
+}
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a.card:hover {
+  background: lightgray !important;
+  color: darkblue;
+  text-decoration: none;
+}
