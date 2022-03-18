@@ -19,7 +19,7 @@ a:link, a:visited {
 }
 
 a.card:hover {
-  background: lightgray !important;
+  background: aliceblue !important;
   color: darkblue;
   text-decoration: none;
 }
