@@ -2,6 +2,7 @@
 
 require_once 'actions/db_connect.php';
 
+
 $sql = "SELECT * FROM data where `ISBN-13` = $_GET[isbn]";
 $result = mysqli_query($connect ,$sql);
 $output='';
@@ -11,7 +12,7 @@ $row['available']?$avColor="success":$avColor="danger";
 $row['available']?:$avText="Sorry, not available at the moment!";
 
 $output =  "
-<h1 class='pb-3 text-center bg-danger bg-opacity-50 display-2'>Details</h1>
+<h1 class='pb-3 text-center bg-warning bg-opacity-50 display-2'>Details</h1>
 <div class='row justify-content-center pt-5'>
 <!-- Content Container -->
   <div class='row justify-content-center content-container'>
@@ -50,13 +51,14 @@ mysqli_close($connect);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP CRUD</title>
+    <title>CR10 - Big Library - Details to: <?= $row['title'] ?></title>
     <?php require_once 'components/styles.php'?>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<?= $output ?>
-
-<?php require_once 'components/scripts.php'?>
+    <?= $output ?>
+    <div class="p-5"> </div>
+    <?php require_once 'components/footer.html'?>
+    <?php require_once 'components/scripts.php'?>
 </body>
 </html>

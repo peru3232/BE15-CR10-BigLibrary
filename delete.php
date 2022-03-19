@@ -23,7 +23,7 @@ if ($_GET['isbn']) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Delete Product</title>
+        <title>CR10 - Big Library - Delete: <?= $title ?>?</title>
         <?php require_once 'components/styles.php'?>
         <style type= "text/css">
             fieldset {
@@ -42,7 +42,7 @@ if ($_GET['isbn']) {
             <h5>You have selected the data below:</h5>
             <table class="table w-75 mt-3">
                 <tr>
-                    <td><?php echo $title?></td>
+                    <td><?= $title ?></td>
                 </tr>
             </table>
 

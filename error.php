@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Error</title>
+        <title>CR10 - Big Library - ERROR</title>
         <?php require_once 'components/styles.php'?>
     </head>
     <body>

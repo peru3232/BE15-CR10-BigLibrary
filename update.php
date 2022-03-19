@@ -31,7 +31,7 @@ if ($_GET['isbn']) {
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <title>Edit Product</title>
+        <title>CR10 - Big Library - Edit of item: <?= $title ?></title>
         <?php require_once 'components/styles.php'?>
         <style type= "text/css">
             fieldset {
