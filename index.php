@@ -14,26 +14,36 @@ if (!(mysqli_num_rows($result)))  {
 }
 
 //add different publishers to list
-$insert = '';
+$insert = $insertF = '';
 while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     $insert.= "
         <li><a class='dropdown-item' href='index.php?publisher_name=".$row['publisher_name']."'>".$row['publisher_name']."</a></li>
     ";
+    $insertF.= "
+        <option>".$row['publisher_name']."</option>
+    ";
 }
 
 //generate dropdown list for publishers
-$output = "
-<div class='dropdown'>
-  <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>
-    Publisher
-  </button>
-  <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
-      <li><a class='dropdown-item' href='index.php'>Select all</a></li>
-  ".$insert."
-  </ul>
+//$output = "
+//<div class='dropdown'>
+//  <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'>
+//    Publisher
+//  </button>
+//  <ul class='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+//      <li><a class='dropdown-item' href='index.php'>Select all</a></li>
+//  ".$insert."
+//  </ul>";
+$output .= "
+<form method='GET'>
+    <select style='width: 170px' name='publisher_name' onchange='this.form.submit();'>
+      <option>-- Select Publisher --</option>
+      <option value=''>(all)</option>
+     ".$insertF."
+    </select>
+</form>
 </div>
 ";
-
 //select list of items (general and in case of we get info from publisher selection...
 if (@$_GET['publisher_name']) {
     $header = $_GET['publisher_name'];

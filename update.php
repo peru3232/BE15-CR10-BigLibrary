@@ -33,7 +33,7 @@ if ($_GET['isbn']) {
     <head>
         <title>CR10 - Big Library - Edit of item: <?= $title ?></title>
         <?php require_once 'components/styles.php'?>
-        <style type= "text/css">
+        <style>
             fieldset {
                 margin: 100px auto auto;
                 width: 60% ;

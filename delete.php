@@ -25,7 +25,7 @@ if ($_GET['isbn']) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CR10 - Big Library - Delete: <?= $title ?>?</title>
         <?php require_once 'components/styles.php'?>
-        <style type= "text/css">
+        <style>
             fieldset {
                 margin: 100px auto auto;
                 width: 70% ;
